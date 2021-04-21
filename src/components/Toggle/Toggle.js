@@ -10,7 +10,7 @@ function Toggle() {
 const Button = styled.input`
   position: relative;
   width: 50px;
-  height: 25px;
+  height: 27.5px;
   appearance: none;
   background-color: #fff;
   background-image: url(${moon});
@@ -19,6 +19,7 @@ const Button = styled.input`
   border-radius: 20px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease all;
+  border: 1px solid ${color.grey_400};
   outline: none;
   box-shadow: ${shadow.lg};
 
