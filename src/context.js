@@ -13,4 +13,4 @@ AppProvider.propTypes = PropTypes.element.isRequired;
 
 export { AppContext, AppProvider };
 
-export const useGolbalContext = () => useContext(AppContext);
+export const useGlobalContext = () => useContext(AppContext);

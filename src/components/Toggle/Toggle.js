@@ -3,23 +3,26 @@ import styled from 'styled-components';
 import moon from '../../images/moon_starts.svg';
 import { color, shadow } from '../../utilities';
 
+import { useGlobalContext } from '../../context';
+
 function Toggle() {
-  return <Button type="checkbox" />;
+  const { dark, setDark } = useGlobalContext();
+  return <Input type="checkbox" dark={dark} onClick={() => setDark(!dark)} />;
 }
 
-const Button = styled.input`
+const Input = styled.input`
   position: relative;
   width: 50px;
-  height: 27.5px;
+  height: 28px;
   appearance: none;
   background-color: #fff;
   background-image: url(${moon});
   background-repeat: no-repeat;
   background-position: center right 20%;
-  border-radius: 20px;
+  border-radius: 50px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease all;
-  border: 1px solid ${color.grey_400};
+  border: 2px solid ${color.grey_400};
   outline: none;
   box-shadow: ${shadow.lg};
 
@@ -27,13 +30,13 @@ const Button = styled.input`
   &::before {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 25.5px;
+    height: 25.5px;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: ${({ dark }) => (dark ? color.white : color.blue_800)};
     top: 0;
-    left: 0;
-    transition: 0.5s ease all;
+    left: ${(props) => (props.dark ? '21px' : 0)};
+    transition: 0.3s ease all;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transform: scale(0.9);
   }
