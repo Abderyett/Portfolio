@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import moon from '../../images/moon_starts.svg';
+import sun from '../../images/sun.svg';
 import { color, shadow } from '../../utilities';
 
 import { useGlobalContext } from '../../context';
@@ -15,10 +16,10 @@ const Input = styled.input`
   width: 50px;
   height: 28px;
   appearance: none;
-  background-color: #fff;
-  background-image: url(${moon});
+  background-color: ${({ dark }) => (dark ? color.white : color.blue_700)};
+  background-image: ${({ dark }) => `url(${dark ? sun : moon})`};
   background-repeat: no-repeat;
-  background-position: center right 20%;
+  background-position: ${({ dark }) => (dark ? 'center left 20%' : 'center right 20%')};
   border-radius: 50px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease all;
@@ -33,7 +34,7 @@ const Input = styled.input`
     width: 25.5px;
     height: 25.5px;
     border-radius: 20px;
-    background-color: ${({ dark }) => (dark ? color.white : color.blue_800)};
+    background-color: ${color.white};
     top: 0;
     left: ${(props) => (props.dark ? '21px' : 0)};
     transition: 0.3s ease all;
