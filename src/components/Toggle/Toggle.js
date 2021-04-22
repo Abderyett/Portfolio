@@ -23,7 +23,7 @@ const Input = styled.input`
   border-radius: 50px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease all;
-  border: 2px solid ${color.grey_400};
+  border: 2px solid ${(props) => props.theme.borderNav};
   outline: none;
   box-shadow: ${shadow.lg};
 

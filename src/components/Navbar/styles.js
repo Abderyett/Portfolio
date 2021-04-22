@@ -4,14 +4,14 @@ import { color } from '../../utilities';
 export const Navbar = styled.nav`
   height: 6rem;
   display: flex;
-  color: ${color.grey_700};
-  border-bottom: 1px solid ${color.grey_200};
+  color: ${(props) => props.theme.headingText};
+  border-bottom: 1px solid ${(props) => props.theme.borderNav};
   align-items: center;
   justify-content: center;
   a {
     font-size: 2.5rem;
     padding-left: 2rem;
-    color: ${color.grey_700};
+    color: ${(props) => props.theme.headingText};
   }
 `;
 export const NavList = styled.ul`
