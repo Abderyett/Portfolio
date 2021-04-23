@@ -23,7 +23,7 @@ const Input = styled.input`
   border-radius: 50px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease all;
-  border: 2px solid ${(props) => props.theme.borderNav};
+  border: 1px solid ${(props) => props.theme.borderNav};
   outline: none;
   box-shadow: ${shadow.lg};
 
@@ -40,6 +40,9 @@ const Input = styled.input`
     transition: 0.3s ease all;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transform: scale(0.9);
+  }
+  @media (max-width: 807px) {
+    display: none;
   }
 `;
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { color } from '../../utilities';
+import Hamburger from '../HumbergerMenu';
 
 export const Navbar = styled.nav`
   height: 6rem;
@@ -13,6 +14,9 @@ export const Navbar = styled.nav`
     padding-left: 2rem;
     color: ${(props) => props.theme.headingText};
   }
+  @media (max-width: 807px) {
+    justify-content: space-between;
+  }
 `;
 export const NavList = styled.ul`
   margin-left: 10rem;
@@ -21,6 +25,15 @@ export const NavList = styled.ul`
     display: inline-block;
     padding: 2.5rem;
     cursor: pointer;
+  }
+  @media (max-width: 807px) {
+    display: none;
+  }
+`;
+export const HambergerMenu = styled(Hamburger)`
+  visibility: hidden;
+
+  @media (max-width: 807px) {
   }
 `;
 
