@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { color } from '../../utilities';
-import Hamburger from '../HumbergerMenu';
 
 export const Navbar = styled.nav`
   height: 6rem;
@@ -30,10 +30,13 @@ export const NavList = styled.ul`
     display: none;
   }
 `;
-export const HambergerMenu = styled(Hamburger)`
-  visibility: hidden;
-
+export const HambergerMenu = styled(GiHamburgerMenu)`
+  font-size: 3rem;
+  display: none;
+  margin-right: 2rem;
+  color: ${(props) => props.theme.headingText};
   @media (max-width: 807px) {
+    display: inline-block;
   }
 `;
 
