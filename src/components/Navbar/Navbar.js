@@ -1,14 +1,16 @@
 import React from 'react';
 import * as S from './styles';
 import Toggle from '../Toggle/Toggle';
+import { useGlobalContext } from '../../context';
 
 function Navbar() {
+  const { openNav, setOpenNav } = useGlobalContext();
   return (
     <S.Navbar>
       <a href="/">Abderaouf Yettou</a>
 
       <S.NavItems>
-        <S.NavList>
+        <S.NavList open={openNav}>
           <li>About</li>
           <li>Skills</li>
           <li>Projects</li>
@@ -16,7 +18,8 @@ function Navbar() {
         </S.NavList>
       </S.NavItems>
       <Toggle />
-      <S.HambergerMenu />
+
+      <S.HambergerMenu onClick={() => setOpenNav(!openNav)} />
     </S.Navbar>
   );
 }
