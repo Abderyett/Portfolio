@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaTimes } from 'react-icons/fa';
 import { color, shadow } from '../../utilities';
 
 export const Navbar = styled.nav`
@@ -45,18 +45,18 @@ export const NavList = styled.ul`
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: 0;
+    left: ${({ open }) => (open ? 0 : '-100%')};
+    transition: all 0.5s ease;
     margin-top: 6rem;
     width: 20rem;
     margin-left: 0;
     padding-left: 0;
-    border-bottom: 1px solid ${(props) => props.theme.borderNav};
+
     width: 100vw;
-    transform: ${({ open }) => (open ? 'translateY(-150%)' : 'translateY(0)')};
-    transition: transform 0.3s ease-in-out;
+    /* transform: ${({ open }) => (open ? 'translateX(-150%)' : 'translateX(0)')}; */
   }
 `;
-export const HambergerMenu = styled(GiHamburgerMenu)`
+export const HambergerMenu = styled.button`
   font-size: 3rem;
   display: none;
   background: transparent;
@@ -70,7 +70,9 @@ export const HambergerMenu = styled(GiHamburgerMenu)`
     display: flex;
   }
 `;
-
+export const Times = styled(FaTimes)`
+  font-size: 2.5rem;
+`;
 export const NavItems = styled.div`
   @media (max-width: 807px) {
   }
