@@ -34,7 +34,7 @@ export const NavList = styled.ul`
       width: 100vw;
       text-align: center;
       &:hover {
-        background-color: ${(props) => props.theme.hoverColor};
+        /* background-color: ${(props) => props.theme.hoverColor}; */
         padding-right: 1.5rem;
         transition: all 0.3s linear;
         color: ${color.blue_500};
@@ -52,7 +52,7 @@ export const NavList = styled.ul`
     width: 20rem;
     margin-left: 0;
     padding-left: 0;
-
+    z-index: 3;
     width: 100vw;
     /* transform: ${({ open }) => (open ? 'translateX(-150%)' : 'translateX(0)')}; */
   }

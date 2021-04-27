@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import wave1 from '../images/hero-wave1.svg';
 import wave2 from '../images/hero-wave2.svg';
 import wave3 from '../images/hero-wave3.svg';
@@ -7,25 +7,37 @@ import wave3 from '../images/hero-wave3.svg';
 function WaveBackground() {
   return (
     <Wrapper>
-      {/* <Background /> */}
-      <Wave src={wave3} style={{ top: '75px' }} />
-      <Wave src={wave2} style={{ top: '150px' }} />
-      <Wave src={wave1} style={{ top: '250px' }} />
+      <FirstWave src={wave3} />
+      <SecondWave src={wave2} />
+      <ThirdWave src={wave1} />
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   position: relative;
+  height: 70vh;
 `;
-const Wave = styled.img`
+const position = css`
   position: absolute;
   width: 100vw;
 `;
-// const Background = styled.div`
-//   background: rgb(255, 255, 255);
-//   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(188, 204, 220, 1) 100%);
-//   width: 100%;
-//   height: 800px;
-// `;
+const FirstWave = styled.img`
+  ${position}
+  top: 75px;
+`;
+const SecondWave = styled.img`
+  ${position}
+  top: 150px;
+`;
+const ThirdWave = styled.img`
+  ${position}
+  top: 250px;
+
+  @media (max-width: 768px) {
+    /* display: none; */
+    top: 170px;
+  }
+`;
+
 export default WaveBackground;
