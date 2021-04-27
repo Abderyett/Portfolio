@@ -1,6 +1,5 @@
 import React from 'react';
 import { GoThreeBars } from 'react-icons/go';
-import { FaTimes } from 'react-icons/fa';
 import * as S from './styles';
 import Toggle from '../Toggle/Toggle';
 import { useGlobalContext } from '../../context';

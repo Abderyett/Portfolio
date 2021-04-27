@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
-import { color, shadow } from '../../utilities';
+import { color } from '../../utilities';
 
 export const Navbar = styled.nav`
   height: 6rem;
@@ -9,6 +9,7 @@ export const Navbar = styled.nav`
   border-bottom: 1px solid ${(props) => props.theme.borderNav};
   align-items: center;
   justify-content: center;
+
   a {
     font-size: 2.5rem;
     padding-left: 2rem;
@@ -61,6 +62,7 @@ export const HambergerMenu = styled.button`
   display: none;
   background: transparent;
   border-color: transparent;
+  outline: none;
   &:hover {
     cursor: pointer;
   }
@@ -73,6 +75,7 @@ export const HambergerMenu = styled.button`
 export const Times = styled(FaTimes)`
   font-size: 2.5rem;
 `;
+
 export const NavItems = styled.div`
   @media (max-width: 807px) {
   }
