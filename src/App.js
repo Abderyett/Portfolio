@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import { GlobalStyle } from './Global';
 import { useGlobalContext } from './context';
 import { lightTheme, darkTheme } from './components/theme';
+import HeroSection from './components/Hero/HeroSection';
 import WaveBackground from './components/WaveBackground';
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
     <ThemeProvider theme={dark ? darkTheme : lightTheme}>
       <AppWrapper>
         <Navbar />
-        <WaveBackground />
+        <HeroSection />
         <GlobalStyle />
       </AppWrapper>
     </ThemeProvider>

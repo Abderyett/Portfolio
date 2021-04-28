@@ -17,11 +17,13 @@ function WaveBackground() {
 const Wrapper = styled.div`
   position: relative;
   height: 70vh;
+  z-index: 0;
 `;
 const position = css`
   position: absolute;
   width: 100vw;
 `;
+
 const FirstWave = styled.img`
   ${position}
   top: 75px;
@@ -35,7 +37,6 @@ const ThirdWave = styled.img`
   top: 250px;
 
   @media (max-width: 768px) {
-    /* display: none; */
     top: 170px;
   }
 `;
