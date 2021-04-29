@@ -5,6 +5,8 @@ export const lightTheme = {
   headingText: `${color.grey_700}`,
   borderNav: `${color.grey_200}`,
   hoverColor: `${color.grey_100}`,
+  heroText: `${color.grey_600}`,
+  paragraphHero: `${color.cyan_500}`,
 };
 
 export const darkTheme = {
@@ -12,4 +14,6 @@ export const darkTheme = {
   headingText: `${color.white}`,
   borderNav: `${color.grey_700}`,
   hoverColor: `${color.grey_700}`,
+  heroText: `${color.grey_400}`,
+  paragraphHero: `${color.cyan_200}`,
 };

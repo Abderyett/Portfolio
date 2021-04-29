@@ -8,9 +8,9 @@ function HeroSection() {
       <S.ContentWrapper>
         <WaveBackground />
         <S.TextWrapper>
-          <S.Title>Hi! I'm Abderaouf Web developer </S.Title>
-
-          {/* <S.Description>I create custom website to help businesses do better online </S.Description> */}
+          <S.Description>Hi, my name is </S.Description>
+          <S.FirstTitle> Abderaouf Yettou</S.FirstTitle>
+          <S.SecondTitle>I build Thing for the web</S.SecondTitle>
         </S.TextWrapper>
       </S.ContentWrapper>
     </S.Wrapper>
