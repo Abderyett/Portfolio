@@ -5,7 +5,7 @@ import { GlobalStyle } from './Global';
 import { useGlobalContext } from './context';
 import { lightTheme, darkTheme } from './components/theme';
 import HeroSection from './components/Hero/HeroSection';
-import WaveBackground from './components/WaveBackground';
+import Scroll from './components/Svg/Scroll';
 
 const App = () => {
   const { dark } = useGlobalContext();
@@ -15,6 +15,7 @@ const App = () => {
       <AppWrapper>
         <Navbar />
         <HeroSection />
+        <Scroll />
         <GlobalStyle />
       </AppWrapper>
     </ThemeProvider>
