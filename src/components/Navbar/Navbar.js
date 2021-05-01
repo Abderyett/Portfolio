@@ -16,9 +16,10 @@ function Navbar() {
           <li>Skills</li>
           <li>Projects</li>
           <li>Contact</li>
+          <Toggle />
         </S.NavList>
       </S.NavItems>
-      <Toggle />
+
       <S.HambergerMenu type="button" onClick={() => setOpenNav(!openNav)}>
         {openNav ? <S.Times /> : <GoThreeBars />}
       </S.HambergerMenu>

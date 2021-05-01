@@ -8,17 +8,21 @@ export const Navbar = styled.nav`
   color: ${(props) => props.theme.headingText};
   border-bottom: 1px solid ${(props) => props.theme.borderNav};
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 
   a {
     font-size: 2.5rem;
-    padding-left: 2rem;
+    padding-left: 6rem;
+
     color: ${(props) => props.theme.headingText};
-    @media (max-width: 807px) {
+    @media (max-width: 847px) {
       font-size: 2rem;
     }
   }
   @media (max-width: 807px) {
+    justify-content: space-between;
+  }
+  @media (min-width: 1350px) {
     justify-content: space-between;
   }
 `;
