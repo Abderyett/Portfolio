@@ -15,21 +15,32 @@ export const TextWrapper = styled.div`
 
   position: absolute;
   top: 0;
+  @media (max-width: 768px) {
+    padding: 50px 30px;
+  }
 `;
 export const FirstTitle = styled.h1`
   font-size: 60px;
   font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 35px;
+  }
 
   color: ${(props) => props.theme.headingText};
 `;
 export const SecondTitle = styled.h1`
   font-size: 60px;
   font-weight: bold;
-
   color: ${(props) => props.theme.heroText};
+  @media (max-width: 768px) {
+    font-size: 35px;
+  }
 `;
 export const Description = styled.p`
   font-size: 17px;
   line-height: 25px;
   color: ${(props) => props.theme.paragraphHero};
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;

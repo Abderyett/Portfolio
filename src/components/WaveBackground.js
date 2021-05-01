@@ -27,17 +27,23 @@ const position = css`
 const FirstWave = styled.img`
   ${position}
   top: 150px;
+  @media (max-width: 768px) {
+    top: 130px;
+  }
 `;
 const SecondWave = styled.img`
   ${position}
   top: 300px;
+  @media (max-width: 768px) {
+    top: 190px;
+  }
 `;
 const ThirdWave = styled.img`
   ${position}
   top: 400px;
 
   @media (max-width: 768px) {
-    top: 170px;
+    top: 240px;
   }
 `;
 
