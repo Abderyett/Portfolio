@@ -15,9 +15,11 @@ function About() {
         <S.Container>
           <S.Image src={profile} />
           <S.AboutText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at ipsam quasi? Voluptate nisi
-            temporibus unde eveniet minus velit dolor quisquam iusto rerum suscipit beatae enim, at, perferendis
-            repellat iure?
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at ipsam quasi? Voluptate nisi
+              temporibus unde eveniet minus velit dolor quisquam iusto rerum suscipit beatae enim, at, perferendis
+              repellat iure?
+            </p>
           </S.AboutText>
         </S.Container>
       </S.ContentWrapper>
