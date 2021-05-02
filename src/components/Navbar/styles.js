@@ -29,6 +29,9 @@ export const Navbar = styled.nav`
 export const NavList = styled.ul`
   margin-left: 10rem;
   font-size: 1.5rem;
+  @media (min-width: 1350px) {
+    margin-right: 5rem;
+  }
 
   li {
     display: inline-block;

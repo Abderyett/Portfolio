@@ -20,6 +20,9 @@ html {
   font-size: 62.5%;
   font-family:'rubikregular';
 }
+body{
+  background:${(props) => props.theme.background}
+}
 a{
   text-decoration:none;
 }

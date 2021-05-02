@@ -97,6 +97,7 @@ const StyledSvg = styled(motion.svg)`
 `;
 const Wrapper = styled.div`
   padding-top: 15rem;
+  padding-bottom: 15rem;
   display: grid;
   place-items: center;
   @media (max-width: 768px) {
