@@ -16,7 +16,7 @@ export const TextWrapper = styled.div`
   position: absolute;
   top: 0;
   @media (max-width: 768px) {
-    padding: 50px 60px;
+    padding: 5rem 3.5rem;
   }
 `;
 export const FirstTitle = styled.h1`

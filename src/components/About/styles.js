@@ -1,11 +1,14 @@
 import styled from 'styled-components';
-import { color, shadow, rounded } from '../../utilities';
+import { shadow, rounded } from '../../utilities';
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  height: 50vh;
 `;
 export const ContentWrapper = styled.div`
   padding-left: 6rem;
+  @media (max-width: 768px) {
+    padding-left: 3.5rem;
+  }
 `;
 export const Text = styled.h1`
   display: inline-block;
@@ -34,6 +37,12 @@ export const Container = styled.div`
   grid-template-columns: 20rem 1fr;
   grid-gap: 2rem;
   align-items: center;
+  margin-top: 5rem;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    place-items: center;
+  }
 `;
 export const Image = styled.img`
   width: 20rem;
@@ -41,15 +50,15 @@ export const Image = styled.img`
   box-shadow: ${shadow.md};
 `;
 export const AboutText = styled.div`
-  width: 95%;
+  width: 100%;
   height: 20rem;
   border-radius: ${rounded.md};
-  /* box-shadow: ${shadow.md}; */
+  box-shadow: ${shadow.md};
   padding: 2rem;
-  background: linear-gradient(240.9deg, rgba(255, 255, 255, 0.6) 0.04%, rgba(255, 255, 255, 0) 100%);
+  background: ${(props) => props.theme.cardColor};
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  filter: drop-shadow(0px 30px 60px rgba(39, 77, 153, 0.1));
+
   backdrop-filter: blur(40px);
   p {
     font-size: 1.7rem;

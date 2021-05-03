@@ -7,6 +7,7 @@ export const lightTheme = {
   hoverColor: `${color.grey_100}`,
   heroText: `${color.grey_600}`,
   paragraphHero: `${color.cyan_500}`,
+  cardColor: `${color.white}`,
 };
 
 export const darkTheme = {
@@ -16,4 +17,5 @@ export const darkTheme = {
   hoverColor: `${color.grey_700}`,
   heroText: `${color.grey_400}`,
   paragraphHero: `${color.cyan_200}`,
+  cardColor: `${color.grey_700}`,
 };

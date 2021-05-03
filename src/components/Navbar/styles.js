@@ -17,6 +17,7 @@ export const Navbar = styled.nav`
     color: ${(props) => props.theme.headingText};
     @media (max-width: 847px) {
       font-size: 2rem;
+      padding-left: 3.5rem;
     }
   }
   @media (max-width: 807px) {
