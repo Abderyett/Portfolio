@@ -3,6 +3,9 @@ import { shadow, rounded } from '../../utilities';
 
 export const Wrapper = styled.div`
   height: 50vh;
+  @media (max-width: 768px) {
+    height: 65vh;
+  }
 `;
 export const ContentWrapper = styled.div`
   padding-left: 6rem;
@@ -42,6 +45,9 @@ export const Container = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     place-items: center;
+    @media (max-width: 768px) {
+      padding-bottom: 10rem;
+    }
   }
 `;
 export const Image = styled.img`
