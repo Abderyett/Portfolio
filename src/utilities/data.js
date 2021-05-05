@@ -66,8 +66,8 @@ export const data = [
   },
   {
     id: 11,
-    name: 'mongodb',
-    image: mongodb,
+    name: 'github',
+    image: github,
   },
   {
     id: 12,
@@ -81,7 +81,7 @@ export const data = [
   },
   {
     id: 14,
-    name: 'github',
-    image: github,
+    name: 'mongodb',
+    image: mongodb,
   },
 ];

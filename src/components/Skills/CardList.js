@@ -25,6 +25,7 @@ const Container = styled.div`
   background: ${(props) => props.theme.cardColor};
   border-radius: ${rounded.md};
   width: 95%;
+
   div {
     width: 15rem;
     height: 15rem;

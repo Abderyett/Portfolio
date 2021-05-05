@@ -1,17 +1,14 @@
 import React from 'react';
 import * as S from './styles';
-import Dots from '../Svg/Dots';
 import profile from '../../images/profile.jpg';
+import Header from '../Header';
 
 function About() {
   return (
     <S.Wrapper>
       <S.Background />
       <S.ContentWrapper>
-        <S.Header>
-          <Dots />
-          <S.Text>About Me</S.Text>
-        </S.Header>
+        <Header text="About Me" />
         <S.Container>
           <S.Image src={profile} />
           <S.AboutText>

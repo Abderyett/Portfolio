@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shadow, rounded } from '../../utilities';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   height: 50vh;
   @media (max-width: 768px) {
     height: 65vh;
@@ -23,13 +23,6 @@ export const Text = styled.h1`
   font-size: 3.6rem;
 `;
 export const Background = styled.div``;
-
-export const Header = styled.div`
-  height: 5rem;
-  color: ${(props) => props.theme.headingText};
-  font-size: 1.5rem;
-  position: relative;
-`;
 
 export const Container = styled.div`
   width: 85vw;

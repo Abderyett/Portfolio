@@ -8,6 +8,7 @@ import HeroSection from './components/Hero/HeroSection';
 import Scroll from './components/Svg/Scroll';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
 
 const App = () => {
   const { dark } = useGlobalContext();
@@ -20,6 +21,7 @@ const App = () => {
         <Scroll />
         <About />
         <Skills />
+        <Projects />
         <GlobalStyle />
       </AppWrapper>
     </ThemeProvider>
