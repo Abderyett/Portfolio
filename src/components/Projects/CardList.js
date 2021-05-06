@@ -7,7 +7,7 @@ function CardList() {
   return (
     <StyledCardList>
       {ProjectData.map((el) => (
-        <Card key={el.id} image={el.image} descrption={el.name} />
+        <Card key={el.id} image={el.image} descrption={el.name} stack={el.stack} />
       ))}
     </StyledCardList>
   );

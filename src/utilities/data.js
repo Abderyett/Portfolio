@@ -12,6 +12,7 @@ import mongodb from '../components/Svg/SvgSkills/MongoDB.svg';
 import posgresql from '../components/Svg/SvgSkills/postgresql.svg';
 import bootstrap from '../components/Svg/SvgSkills/bootstrap.svg';
 import github from '../components/Svg/SvgSkills/github.svg';
+import redux from '../components/Svg/SvgSkills/redux.svg';
 
 export const data = [
   {
@@ -46,41 +47,46 @@ export const data = [
   },
   {
     id: 7,
+    name: 'redux',
+    image: redux,
+  },
+  {
+    id: 8,
     name: 'Typescript',
     image: typescript,
   },
   {
-    id: 8,
+    id: 9,
     name: 'Node',
     image: Node,
   },
   {
-    id: 9,
+    id: 10,
     name: 'Webpack',
     image: webpack,
   },
   {
-    id: 10,
+    id: 11,
     name: 'NPM',
     image: npm,
   },
   {
-    id: 11,
+    id: 12,
     name: 'github',
     image: github,
   },
   {
-    id: 12,
+    id: 13,
     name: 'posgresql',
     image: posgresql,
   },
   {
-    id: 13,
+    id: 14,
     name: 'bootstrap',
     image: bootstrap,
   },
   {
-    id: 14,
+    id: 15,
     name: 'mongodb',
     image: mongodb,
   },
