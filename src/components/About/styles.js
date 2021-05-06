@@ -56,7 +56,6 @@ export const AboutText = styled.div`
   padding: 2rem;
   background: ${(props) => props.theme.cardColor};
   border: 0.5px solid rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
 
   backdrop-filter: blur(40px);
   p {
