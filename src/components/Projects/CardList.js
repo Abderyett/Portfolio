@@ -15,5 +15,10 @@ function CardList() {
 
 const StyledCardList = styled.div`
   padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 35rem);
+  grid-gap: 2rem;
+  place-items: center;
+  place-content: center;
 `;
 export default CardList;

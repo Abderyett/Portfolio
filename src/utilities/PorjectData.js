@@ -1,5 +1,5 @@
 import MovieDb from '../images/ProjectImages/MovieDB.jpg';
-import commingSoon from '../images/ProjectImages/commingSoon.png';
+import commingSoon from '../images/ProjectImages/CommingSoon.jpg';
 
 export const ProjectData = [
   {
