@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { GoLinkExternal, GoMarkGithub } from 'react-icons/go';
-import { motion } from 'framer-motion';
 import { rounded, shadow, color } from '../../utilities';
 
 function Card({ image, description, stack, link }) {
@@ -35,6 +34,10 @@ const StyledCard = styled.div`
   background: ${(props) => props.theme.cardColor};
   border-radius: ${rounded.md};
   box-shadow: ${shadow.md};
+  &:hover {
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: ${shadow.xl};
+  }
 `;
 const ImageContainer = styled.div`
   cursor: pointer;
@@ -48,7 +51,7 @@ const ImageContainer = styled.div`
     border-top-right-radius: ${rounded.md};
   }
 `;
-const Links = styled(motion.div)`
+const Links = styled.div`
   position: absolute;
   bottom: 0;
   padding-bottom: 2rem;
