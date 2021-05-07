@@ -28,14 +28,14 @@ function Card({ image, description, stack, link }) {
 }
 
 const StyledCard = styled.div`
-  width: 30rem;
+  width: 30.1rem;
   height: 40rem;
   position: relative;
   background: ${(props) => props.theme.cardColor};
   border-radius: ${rounded.md};
   box-shadow: ${shadow.md};
   &:hover {
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border: 0.5px solid ${(props) => props.theme.cardHover};
     box-shadow: ${shadow.xl};
   }
 `;

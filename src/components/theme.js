@@ -8,6 +8,7 @@ export const lightTheme = {
   heroText: `${color.grey_600}`,
   paragraphHero: `${color.cyan_500}`,
   cardColor: `${color.white}`,
+  cardHover: `${color.grey_500}`,
 };
 
 export const darkTheme = {
@@ -18,4 +19,5 @@ export const darkTheme = {
   heroText: `${color.grey_400}`,
   paragraphHero: `${color.cyan_200}`,
   cardColor: `${color.grey_700}`,
+  cardHover: `${color.white}`,
 };
