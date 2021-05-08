@@ -19,8 +19,8 @@ function Card({ image, description, stack, link }) {
         <img src={image} alt={description} />
       </ImageContainer>
       <Details>
-        {stack.map((el) => (
-          <span>{el}</span>
+        {stack.map((el, index) => (
+          <span key={index}>{el}</span>
         ))}
       </Details>
     </StyledCard>
@@ -28,7 +28,7 @@ function Card({ image, description, stack, link }) {
 }
 
 const StyledCard = styled.div`
-  width: 30.1rem;
+  width: 30.2rem;
   height: 40rem;
   position: relative;
   background: ${(props) => props.theme.cardColor};
