@@ -46,7 +46,7 @@ const FormStyled = css`
   color: ${color.grey_700};
 
   &:focus {
-    outline: 1px solid ${color.blue_400};
+    outline: 1px solid ${(props) => props.theme.outlineColor};
     /* box-shadow: 0 0 1pt 1pt ${color.red_400}; */
   }
 `;
