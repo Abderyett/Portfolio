@@ -10,6 +10,8 @@ export const lightTheme = {
   cardColor: `${color.white}`,
   cardHover: `${color.grey_500}`,
   outlineColor: `${color.blue_400}`,
+  tagColor: `${color.grey_600}`,
+  tagBackground: `${color.grey_200}`,
 };
 
 export const darkTheme = {
@@ -17,9 +19,11 @@ export const darkTheme = {
   headingText: `${color.white}`,
   borderNav: `${color.grey_700}`,
   hoverColor: `${color.grey_700}`,
-  heroText: `${color.grey_400}`,
-  paragraphHero: `${color.cyan_200}`,
-  cardColor: `${color.grey_700}`,
+  heroText: `${color.grey_500}`,
+  paragraphHero: `${color.cyan_400}`,
+  cardColor: `rgba(74, 85, 104, 0.3)`,
   cardHover: `${color.white}`,
   outlineColor: `${color.cyan_500}`,
+  tagColor: `${color.grey_300}`,
+  // tagBackground: `${color.grey_700}`,
 };

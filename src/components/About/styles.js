@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import { shadow, rounded } from '../../utilities';
+import bubles from '../../images/bubles.svg';
 
 export const Wrapper = styled.section`
   height: 50vh;
+  position: relative;
+
   @media (max-width: 768px) {
     height: 65vh;
   }
@@ -22,7 +25,16 @@ export const Text = styled.h1`
   z-index: 1;
   font-size: 3.6rem;
 `;
-export const Background = styled.div``;
+export const Background = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(${bubles});
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  z-index: 0;
+`;
 
 export const Container = styled.div`
   width: 85vw;
@@ -47,6 +59,7 @@ export const Image = styled.img`
   width: 20rem;
   border-radius: ${rounded.md};
   box-shadow: ${shadow.md};
+  z-index: 1;
 `;
 export const AboutText = styled.div`
   width: 100%;
@@ -58,6 +71,7 @@ export const AboutText = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.2);
 
   backdrop-filter: blur(40px);
+  z-index: 1;
   p {
     font-size: 1.7rem;
     color: ${(props) => props.theme.headingText};

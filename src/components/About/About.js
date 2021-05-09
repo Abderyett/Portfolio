@@ -2,11 +2,11 @@ import React from 'react';
 import * as S from './styles';
 import profile from '../../images/profile.jpg';
 import Header from '../Header';
+import Background from './Background';
 
 function About() {
   return (
     <S.Wrapper>
-      <S.Background />
       <S.ContentWrapper>
         <Header text="About Me" />
         <S.Container>
@@ -19,6 +19,7 @@ function About() {
             </p>
           </S.AboutText>
         </S.Container>
+        <Background />
       </S.ContentWrapper>
     </S.Wrapper>
   );

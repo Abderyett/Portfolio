@@ -89,9 +89,10 @@ const Details = styled.div`
     text-transform: capitalize;
     padding: 0.4rem;
     margin: 0.2rem;
-    color: ${color.grey_600};
-    background: ${color.grey_200};
+    color: ${(props) => props.theme.tagColor};
+    background: ${(props) => props.theme.tagBackground};
     border-radius: ${rounded.lg};
+    font-size: 1.1rem;
   }
 `;
 

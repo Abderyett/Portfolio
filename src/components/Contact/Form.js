@@ -44,6 +44,7 @@ const FormStyled = css`
   text-indent: 3%;
   height: 4rem;
   color: ${color.grey_700};
+  font-family: 'rubikregular';
 
   &:focus {
     outline: 1px solid ${(props) => props.theme.outlineColor};
