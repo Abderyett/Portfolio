@@ -47,6 +47,7 @@ const FormStyled = css`
 
   &:focus {
     outline: 1px solid ${color.blue_400};
+    /* box-shadow: 0 0 1pt 1pt ${color.red_400}; */
   }
 `;
 const StyledfInput = styled.input`
@@ -62,11 +63,12 @@ const StyledfTextarea = styled.textarea`
 `;
 const NameInput = styled.input`
   ${FormStyled}
-  width: 200px;
+  width: 100%;
+  margin-right: 2rem;
 `;
 const EmailInput = styled.input`
   ${FormStyled};
-  width: 300px;
+  width: 100%;
 `;
 const SubmitInput = styled.input`
   ${FormStyled};
@@ -77,6 +79,7 @@ const SubmitInput = styled.input`
 
   &:focus {
     outline: none;
+    box-shadow: none;
   }
   &:active {
     transform: translateY(2px);
@@ -86,9 +89,15 @@ const SubmitInput = styled.input`
     background-color: ${color.cyan_400};
   }
 `;
+
 const Wrapper = styled.div`
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(auto-fit, 22rem);
+  max-width: 540px;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
 `;
