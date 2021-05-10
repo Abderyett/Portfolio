@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Form from './Form';
 import Header from '../Header';
 import { color } from '../../utilities';
+import Background from './Background';
 
 function Contact() {
   return (
@@ -14,12 +15,13 @@ function Contact() {
       <Email>
         Don't like forms, send me an <a href="mailto:abderaouf.yettou@gmail.com">email</a> 👋
       </Email>
+      <Background />
     </Wrapper>
   );
 }
 const Wrapper = styled.section`
   padding-left: 6rem;
-
+  position: relative;
   margin-top: 10rem;
   width: 95%;
   max-width: 1234px;
@@ -27,6 +29,7 @@ const Wrapper = styled.section`
   grid-auto-flow: column;
   align-content: stretch;
   grid-gap: 2rem;
+  z-index: 1;
   @media (max-width: 768px) {
     padding-left: 3.5rem;
     grid-auto-flow: row;
@@ -35,6 +38,7 @@ const Wrapper = styled.section`
 `;
 const FormWrapper = styled.section`
   margin-top: 7rem;
+  z-index: 3;
   @media (max-width: 768px) {
     margin-top: 1rem;
   }
@@ -46,6 +50,7 @@ const Email = styled.div`
 
   a {
     color: ${color.cyan_400};
+    z-index: 1;
   }
 `;
 

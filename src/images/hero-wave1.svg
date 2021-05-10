@@ -1,6 +1,7 @@
 <svg width="1200" height="252" viewBox="0 0 1200 252" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#paint0_linear)">
- <animate repeatCount='indefinite' fill='freeze' attributeName='d' dur='20s' values='M0 0H50C100 0 200 0 300 18C400 36 500 72 600 78C700 84 800 60 900 60C1000 60 1100 84 1150 96L1200 108V252H1150C1100 252 1000 252 900 252C800 252 700 252 600 252C500 252 400 252 300 252C200 252 100 252 50 252H0V0Z
+ <animate repeatCount='indefinite' fill='freeze' attributeName='d' dur='20s' values='M0 0H50C100 0 200 0 300 18C400 36 500 72 600 78C700 84 800 60 900 60C1000 60 1100 84 1150 96L1200 108V252H1150C1100 252 1000 252 900 252C800 252 700 252 600 252C500 252 400 252 300 252C200 252 100 252 50 252H0V0Z;
+ 
  '
 />
  </path>
