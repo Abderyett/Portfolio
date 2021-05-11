@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 import { shadow, rounded } from '../../utilities';
-import bubles from '../../images/bubles.svg';
 
 export const Wrapper = styled.section`
-  height: 50vh;
+  height: 100vh;
   position: relative;
+  display: grid;
+  align-items: center;
 
   @media (max-width: 768px) {
-    height: 65vh;
+    display: grid;
+    align-items: start;
+    justify-content: space-evenly;
+    align-content: stretch;
   }
 `;
 export const ContentWrapper = styled.div`
@@ -25,16 +29,6 @@ export const Text = styled.h1`
   z-index: 1;
   font-size: 3.6rem;
 `;
-// export const Background = styled.div`
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   background: url(${bubles});
-//   background-repeat: no-repeat;
-//   right: 0;
-//   top: 0;
-//   z-index: 0;
-// `;
 
 export const Container = styled.div`
   width: 85vw;

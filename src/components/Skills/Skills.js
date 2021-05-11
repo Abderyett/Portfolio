@@ -5,7 +5,7 @@ import CardList from './CardList';
 
 function Skills() {
   return (
-    <Wrapper>
+    <Wrapper id="skills">
       <ContentWrapper>
         <Header text="Skills" />
         <CardList />

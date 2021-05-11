@@ -30,14 +30,17 @@ export const Navbar = styled.nav`
 export const NavList = styled.ul`
   margin-left: 10rem;
   font-size: 1.5rem;
+  display: flex;
   @media (min-width: 1350px) {
     margin-right: 5rem;
   }
 
-  li {
+  li a {
     display: inline-block;
     padding: 2.5rem;
     cursor: pointer;
+    font-size: 1.5rem;
+
     @media (max-width: 807px) {
       width: 100vw;
       text-align: center;

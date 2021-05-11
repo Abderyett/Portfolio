@@ -25,17 +25,17 @@ const Position = css`
 
 const FirstBuble = styled.img`
   ${Position}
-  top: 5%;
+  top: 30%;
   right: 23%;
 `;
 const SecondBuble = styled.img`
   ${Position}
-  bottom: 0;
+  bottom: 15%;
   left: 0;
 `;
 const ThirdBuble = styled.img`
   ${Position}
-  top: 5%;
+  top: 25%;
   left: 30%;
 `;
 export default Background;

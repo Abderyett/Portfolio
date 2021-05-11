@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoThreeBars } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 import * as S from './styles';
 import Toggle from '../Toggle/Toggle';
 import { useGlobalContext } from '../../context';
@@ -12,10 +13,20 @@ function Navbar() {
 
       <S.NavItems>
         <S.NavList open={openNav}>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+
           <Toggle />
         </S.NavList>
       </S.NavItems>

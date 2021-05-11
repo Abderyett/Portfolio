@@ -15,7 +15,7 @@ const Input = styled.input`
   position: relative;
   width: 50px;
   height: 28px;
-  top: 8px;
+  top: 19px;
   appearance: none;
   background-color: ${({ dark }) => (dark ? color.white : color.blue_700)};
   background-image: ${({ dark }) => `url(${dark ? sun : moon})`};

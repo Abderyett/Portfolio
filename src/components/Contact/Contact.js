@@ -7,7 +7,7 @@ import Background from './Background';
 
 function Contact() {
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <Header text="Contact" />
       <FormWrapper>
         <Form />
@@ -24,10 +24,11 @@ const Wrapper = styled.section`
   position: relative;
   margin-top: 10rem;
   width: 95%;
+  height: 100vh;
   max-width: 1234px;
   display: grid;
   grid-auto-flow: column;
-  align-content: stretch;
+  align-content: center;
   grid-gap: 2rem;
   z-index: 1;
   @media (max-width: 768px) {

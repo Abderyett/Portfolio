@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import { GlobalStyle } from './Global';
 import { useGlobalContext } from './context';
@@ -16,19 +17,23 @@ const App = () => {
   const { dark } = useGlobalContext();
 
   return (
-    <ThemeProvider theme={dark ? darkTheme : lightTheme}>
-      <AppWrapper>
-        <Navbar />
-        <HeroSection />
-        <Scroll />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        <GlobalStyle />
-        <Footer />
-      </AppWrapper>
-    </ThemeProvider>
+    <Router>
+      <Switch>
+        <ThemeProvider theme={dark ? darkTheme : lightTheme}>
+          <AppWrapper>
+            <Navbar />
+            <HeroSection />
+            <Scroll />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+            <GlobalStyle />
+            <Footer />
+          </AppWrapper>
+        </ThemeProvider>
+      </Switch>
+    </Router>
   );
 };
 

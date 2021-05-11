@@ -6,7 +6,7 @@ import Background from './Background';
 
 function About() {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="about">
       <S.ContentWrapper>
         <Header text="About Me" />
         <S.Container>

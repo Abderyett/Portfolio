@@ -5,7 +5,7 @@ import CardList from './CardList';
 
 function Projects() {
   return (
-    <S.Container>
+    <S.Container id="projects">
       <Header text="Projects" />
       <CardList />
     </S.Container>

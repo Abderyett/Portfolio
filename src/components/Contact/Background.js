@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import buble from '../../images/buble1.svg';
 import secondbuble from '../../images/buble2.svg';
 import ThirdBubble from '../../images/ThirdBubble.svg';
 
@@ -36,7 +35,7 @@ const SecondBuble = styled.img`
   bottom: 0;
   right: 0;
   @media (max-width: 600px) {
-    bottom: 14%;
+    bottom: 20%;
     right: 0;
   }
 `;
