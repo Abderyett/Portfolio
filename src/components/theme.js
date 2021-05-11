@@ -23,7 +23,7 @@ export const darkTheme = {
   paragraphHero: `${color.cyan_400}`,
   cardColor: `rgba(74, 85, 104, 0.3)`,
   cardHover: `${color.white}`,
-  outlineColor: `${color.cyan_500}`,
+  outlineColor: `${color.light_blue_vivid_500}`,
   tagColor: `${color.grey_300}`,
   // tagBackground: `${color.grey_700}`,
 };
