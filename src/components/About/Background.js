@@ -16,6 +16,7 @@ function Background() {
 
 const Wrapper = styled.div`
   max-width: 1234px;
+  overflow: auto;
 `;
 const Position = css`
   position: absolute;

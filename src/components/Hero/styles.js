@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
   height: 60vh;
   position: relative;
   z-index: 1;
+
   @media (max-width: 768px) {
     display: grid;
     height: 50vh;

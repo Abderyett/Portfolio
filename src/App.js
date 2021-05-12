@@ -26,8 +26,8 @@ const App = () => {
         <Skills />
         <Projects />
         <Contact />
-        <GlobalStyle />
         <Footer />
+        <GlobalStyle />
       </AppWrapper>
     </ThemeProvider>
   );
@@ -38,6 +38,7 @@ const AppWrapper = styled.div`
   margin: 0 auto;
   background: ${({ theme }) => theme.background};
   transition: 0.6s ease all;
+  overflow: scroll;
 `;
 
 export default App;

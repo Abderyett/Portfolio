@@ -37,25 +37,17 @@ function Navbar() {
       <S.NavItems>
         <S.NavList open={openNav}>
           <li>
-            <Link to="about" smooth duration={1000}>
-              About
-            </Link>
+            <a href="#about">About</a>
           </li>
 
           <li>
-            <Link to="skills" smooth duration={1000}>
-              Skills
-            </Link>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <Link to="projects" smooth duration={1000}>
-              Projects
-            </Link>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <Link to="contact" smooth duration={1000}>
-              Contact
-            </Link>
+            <a href="#contact">Contact</a>
           </li>
 
           <Toggle />

@@ -16,6 +16,7 @@ function Skills() {
 const Wrapper = styled.section``;
 const ContentWrapper = styled.div`
   padding-left: 6rem;
+
   @media (max-width: 768px) {
     padding-left: 3.5rem;
   }
