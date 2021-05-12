@@ -61,7 +61,7 @@ const Links = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: rgba(97, 210, 204, 0.8);
+  background-color: rgba(74, 85, 104, 0.7);
   border-top-left-radius: ${rounded.md};
   border-top-right-radius: ${rounded.md};
 
