@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { GoThreeBars } from 'react-icons/go';
 import { Link } from 'react-scroll';
-import _ from 'lodash';
+
 import * as S from './styles';
 import Toggle from '../Toggle/Toggle';
 import { useGlobalContext } from '../../context';
@@ -55,7 +55,9 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="contact">Contact</Link>
+            <Link to="contact" smooth>
+              Contact
+            </Link>
           </li>
 
           <Toggle />

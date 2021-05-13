@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
+
 import { color } from '../../utilities';
 
 export const Navbar = styled.nav`
@@ -21,6 +22,7 @@ export const Navbar = styled.nav`
     padding-left: 6rem;
     cursor: pointer;
     color: ${(props) => props.theme.headingText};
+
     @media (max-width: 847px) {
       font-size: 2rem;
       padding-left: 3.5rem;
@@ -46,6 +48,10 @@ export const NavList = styled.ul`
     padding: 2.5rem;
     cursor: pointer;
     font-size: 1.5rem;
+    position: relative;
+    &:hover {
+      color: ${color.cyan_500};
+    }
 
     @media (max-width: 807px) {
       width: 100vw;

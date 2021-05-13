@@ -12,6 +12,7 @@ export const lightTheme = {
   outlineColor: `${color.blue_400}`,
   tagColor: `${color.grey_600}`,
   tagBackground: `${color.grey_200}`,
+  arrowColor: `rgba(74, 85, 104, 0.3)`,
 };
 
 export const darkTheme = {
@@ -25,5 +26,6 @@ export const darkTheme = {
   cardHover: `${color.white}`,
   outlineColor: `${color.light_blue_vivid_500}`,
   tagColor: `${color.grey_300}`,
+  arrowColor: `rgba(160, 174, 192, 0.5)`,
   // tagBackground: `${color.grey_700}`,
 };
