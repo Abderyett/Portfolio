@@ -4,7 +4,7 @@ import WaveBackground from '../WaveBackground';
 
 function HeroSection() {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="home">
       <S.ContentWrapper>
         <WaveBackground />
         <S.TextWrapper>

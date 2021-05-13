@@ -34,11 +34,9 @@ const App = () => {
 };
 
 const AppWrapper = styled.div`
-  height: 100vh;
   margin: 0 auto;
   background: ${({ theme }) => theme.background};
   transition: 0.6s ease all;
-  overflow: scroll;
 `;
 
 export default App;

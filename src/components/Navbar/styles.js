@@ -9,9 +9,9 @@ export const Navbar = styled.nav`
   border-bottom: 1px solid ${(props) => props.theme.borderNav};
   align-items: center;
   justify-content: start;
+  position: sticky;
   top: 0;
   left: 0;
-  position: sticky;
   transition: top 0.6s ease;
   background-color: ${(props) => props.theme.background};
   z-index: 5;
@@ -19,7 +19,7 @@ export const Navbar = styled.nav`
   a {
     font-size: 2.5rem;
     padding-left: 6rem;
-
+    cursor: pointer;
     color: ${(props) => props.theme.headingText};
     @media (max-width: 847px) {
       font-size: 2rem;

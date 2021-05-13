@@ -8,46 +8,54 @@ import { useGlobalContext } from '../../context';
 
 function Navbar() {
   const { openNav, setOpenNav } = useGlobalContext();
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  // const [prevScrollPos, setPrevScrollPos] = useState(0);
+  // const [visible, setVisible] = useState(true);
 
-  const handleScroll = _.debounce(() => {
-    const currentPos = window.pageYOffset;
-    if (prevScrollPos === currentPos) {
-      setVisible(true);
-    }
-    if (prevScrollPos < currentPos) {
-      setVisible(false);
-    } else {
-      setVisible(true);
-    }
-    setPrevScrollPos(currentPos);
-  }, 50);
+  // const handleScroll = _.debounce(() => {
+  //   const currentPos = window.pageYOffset;
+  //   if (prevScrollPos === currentPos) {
+  //     setVisible(true);
+  //   }
+  //   if (prevScrollPos < currentPos) {
+  //     setVisible(false);
+  //   } else {
+  //     setVisible(true);
+  //   }
+  //   setPrevScrollPos(currentPos);
+  // }, 50);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [visible, prevScrollPos]);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [visible, prevScrollPos]);
 
   return (
-    <S.Navbar show={visible}>
-      <a href="/">Abderaouf Yettou</a>
+    <S.Navbar>
+      <Link to="home" smooth offset={-60}>
+        Abderaouf Yettou
+      </Link>
 
       <S.NavItems>
         <S.NavList open={openNav}>
           <li>
-            <a href="#about">About</a>
+            <Link to="about" smooth>
+              About
+            </Link>
           </li>
 
           <li>
-            <a href="#skills">Skills</a>
+            <Link to="skills" smooth offset={-70}>
+              Skills
+            </Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link to="projects" smooth offset={-70}>
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="contact">Contact</Link>
           </li>
 
           <Toggle />
