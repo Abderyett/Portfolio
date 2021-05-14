@@ -39,23 +39,23 @@ function Navbar() {
       <S.NavItems>
         <S.NavList open={openNav}>
           <li>
-            <Link to="about" smooth>
+            <Link to="about" smooth offset={-70} onClick={() => setOpenNav(false)}>
               About
             </Link>
           </li>
 
           <li>
-            <Link to="skills" smooth offset={-70}>
+            <Link to="skills" smooth offset={-70} onClick={() => setOpenNav(false)}>
               Skills
             </Link>
           </li>
           <li>
-            <Link to="projects" smooth offset={-70}>
+            <Link to="projects" smooth offset={-70} onClick={() => setOpenNav(false)}>
               Projects
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth>
+            <Link to="contact" smooth onClick={() => setOpenNav(false)}>
               Contact
             </Link>
           </li>
