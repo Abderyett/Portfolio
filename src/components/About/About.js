@@ -12,7 +12,7 @@ import { color } from '../../utilities';
 
 function About() {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
   const animation = useAnimation();
 

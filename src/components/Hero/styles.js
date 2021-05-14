@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Wrapper = styled.section`
   max-width: 1400px;
@@ -14,7 +15,7 @@ export const Wrapper = styled.section`
 export const ContentWrapper = styled.div`
   max-width: 1234px;
 `;
-export const TextWrapper = styled.div`
+export const TextWrapper = styled(motion.div)`
   /* max-width: 600px; */
   padding: 100px 60px;
 
@@ -27,11 +28,13 @@ export const TextWrapper = styled.div`
 export const FirstTitle = styled.h1`
   font-size: 60px;
   font-weight: bold;
+  background: rgb(176, 197, 230);
+  background: linear-gradient(180deg, rgba(176, 197, 230, 1) 33%, rgba(97, 210, 204, 1) 100%);
+  background-clip: text;
+  color: transparent;
   @media (max-width: 768px) {
     font-size: 35px;
   }
-
-  color: ${(props) => props.theme.headingText};
 `;
 export const SecondTitle = styled.h1`
   font-size: 60px;
