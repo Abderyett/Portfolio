@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { shadow, rounded } from '../../utilities';
 
 export const Wrapper = styled.section`
@@ -49,13 +50,13 @@ export const Container = styled.div`
     }
   }
 `;
-export const Image = styled.img`
+export const Image = styled(motion.img)`
   width: 20rem;
   border-radius: ${rounded.md};
   box-shadow: ${shadow.md};
   z-index: 1;
 `;
-export const AboutText = styled.div`
+export const AboutText = styled(motion.div)`
   width: 100%;
   height: 20rem;
   border-radius: ${rounded.md};

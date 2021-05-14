@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { IoArrowUpCircle } from 'react-icons/io5';
 import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
+import { useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import * as S from './styles';
 import profile from '../../images/profile.jpg';
 import Header from '../Header';
@@ -9,6 +11,23 @@ import Background from './Background';
 import { color } from '../../utilities';
 
 function About() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          duration: 3,
+        },
+      });
+    }
+  }, [inView]);
   useEffect(() => {
     const position = () => {
       const arrow = document.querySelector('#arrow');
@@ -32,8 +51,8 @@ function About() {
         <StyledArrow id="arrow" onClick={() => scroll.scrollToTop()} />
         <Header text="About Me" />
         <S.Container>
-          <S.Image src={profile} />
-          <S.AboutText>
+          <S.Image ref={ref} src={profile} animate={animation} initial={{ x: -200 }} />
+          <S.AboutText ref={ref} animate={animation} initial={{ x: 200 }}>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at ipsam quasi? Voluptate nisi
               temporibus unde eveniet minus velit dolor quisquam iusto rerum suscipit beatae enim, at, perferendis
