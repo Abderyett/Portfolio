@@ -30,7 +30,7 @@ function Contact() {
       <FormWrapper>
         <Form />
       </FormWrapper>
-      <Email ref={ref} animate={animation} initial={{ x: 200, opacity: 0 }}>
+      <Email ref={ref} animate={animation} initial={{ x: 10, opacity: 0 }}>
         Don't like forms, send me an <a href="mailto:abderaouf.yettou@gmail.com">email</a> 👋
       </Email>
       <Background />

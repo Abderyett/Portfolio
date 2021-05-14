@@ -12,7 +12,7 @@ import { color } from '../../utilities';
 
 function About() {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.4,
   });
   const animation = useAnimation();
 
@@ -50,8 +50,8 @@ function About() {
         <StyledArrow id="arrow" onClick={() => scroll.scrollToTop()} />
         <Header text="About Me" />
         <S.Container>
-          <S.Image ref={ref} src={profile} animate={animation} initial={{ x: -200, opacity: 0 }} />
-          <S.AboutText ref={ref} animate={animation} initial={{ x: 200, opacity: 0 }}>
+          <S.Image ref={ref} src={profile} animate={animation} initial={{ x: -10, opacity: 0 }} />
+          <S.AboutText ref={ref} animate={animation} initial={{ x: 10, opacity: 0 }}>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at ipsam quasi? Voluptate nisi
               temporibus unde eveniet minus velit dolor quisquam iusto rerum suscipit beatae enim, at, perferendis
@@ -69,8 +69,8 @@ const StyledArrow = styled(IoArrowUpCircle)`
   color: ${({ theme }) => theme.arrowColor};
   cursor: pointer;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 25px;
+  right: 25px;
   z-index: 99;
   opacity: 0;
 

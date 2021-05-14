@@ -33,7 +33,6 @@ const App = () => {
 };
 
 const AppWrapper = styled.div`
-  margin: 0 auto;
   background: ${({ theme }) => theme.background};
   transition: 0.6s ease all;
 `;

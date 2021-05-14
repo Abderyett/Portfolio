@@ -31,6 +31,8 @@ export const FirstTitle = styled.h1`
   background: rgb(176, 197, 230);
   background: linear-gradient(180deg, rgba(176, 197, 230, 1) 33%, rgba(97, 210, 204, 1) 100%);
   background-clip: text;
+  --moz-background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   @media (max-width: 768px) {
     font-size: 35px;

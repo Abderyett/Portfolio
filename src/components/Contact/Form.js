@@ -40,7 +40,7 @@ export default function ContactUs() {
     <StyledForm
       ref={ref}
       animate={animation}
-      initial={{ x: -200, opacity: 0 }}
+      initial={{ x: -10, opacity: 0 }}
       className="contact-form"
       onSubmit={sendEmail}
     >

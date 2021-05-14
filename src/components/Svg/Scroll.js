@@ -101,7 +101,7 @@ const Wrapper = styled.div`
   display: grid;
   place-items: center;
   @media (max-width: 768px) {
-    /* display: none; */
+    padding-top: 2rem;
   }
 `;
 const AnimatedPath = styled(motion.path)``;
