@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { GoLinkExternal, GoMarkGithub } from 'react-icons/go';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { rounded, shadow, color } from '../../utilities';
 
 function Card({ image, description, stack, link }) {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [inView]);
   return (
-    <StyledCard>
+    <StyledCard ref={ref} animate={animation} initial={{ opacity: 0 }}>
       <ImageContainer>
         <Links>
           <StyledLink href={link} target="_blank" rel="noopener noreferrer">
@@ -27,7 +44,7 @@ function Card({ image, description, stack, link }) {
   );
 }
 
-const StyledCard = styled.div`
+const StyledCard = styled(motion.div)`
   width: 30.2rem;
   height: 40rem;
   position: relative;

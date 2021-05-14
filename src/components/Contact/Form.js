@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import styled, { css } from 'styled-components';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { color, rounded, shadow } from '../../utilities';
 
 export default function ContactUs() {
@@ -17,9 +19,31 @@ export default function ContactUs() {
       }
     );
   }
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [inView]);
 
   return (
-    <StyledForm className="contact-form" onSubmit={sendEmail}>
+    <StyledForm
+      ref={ref}
+      animate={animation}
+      initial={{ x: -200, opacity: 0 }}
+      className="contact-form"
+      onSubmit={sendEmail}
+    >
       <Wrapper>
         <NameInput type="text" name="name" placeholder="Your Name" />
         <EmailInput type="email" name="user_email" placeholder="Email" />
@@ -32,7 +56,7 @@ export default function ContactUs() {
   );
 }
 
-const StyledForm = styled.form`
+const StyledForm = styled(motion.form)`
   display: grid;
   grid-gap: 2rem;
   padding-top: 2rem;

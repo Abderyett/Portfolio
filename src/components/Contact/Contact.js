@@ -1,18 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import Form from './Form';
 import Header from '../Header';
 import { color } from '../../utilities';
 import Background from './Background';
 
 function Contact() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [inView]);
   return (
     <Wrapper id="contact">
       <Header text="Contact" />
       <FormWrapper>
         <Form />
       </FormWrapper>
-      <Email>
+      <Email ref={ref} animate={animation} initial={{ x: 200, opacity: 0 }}>
         Don't like forms, send me an <a href="mailto:abderaouf.yettou@gmail.com">email</a> 👋
       </Email>
       <Background />
@@ -44,7 +62,7 @@ const FormWrapper = styled.section`
     margin-top: 1rem;
   }
 `;
-const Email = styled.div`
+const Email = styled(motion.div)`
   margin-top: 10rem;
   font-size: 2rem;
   color: ${(props) => props.theme.headingText};

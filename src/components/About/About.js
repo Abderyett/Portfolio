@@ -22,8 +22,7 @@ function About() {
         x: 0,
         opacity: 1,
         transition: {
-          type: 'spring',
-          duration: 3,
+          duration: 2,
         },
       });
     }
@@ -51,8 +50,8 @@ function About() {
         <StyledArrow id="arrow" onClick={() => scroll.scrollToTop()} />
         <Header text="About Me" />
         <S.Container>
-          <S.Image ref={ref} src={profile} animate={animation} initial={{ x: -200 }} />
-          <S.AboutText ref={ref} animate={animation} initial={{ x: 200 }}>
+          <S.Image ref={ref} src={profile} animate={animation} initial={{ x: -200, opacity: 0 }} />
+          <S.AboutText ref={ref} animate={animation} initial={{ x: 200, opacity: 0 }}>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at ipsam quasi? Voluptate nisi
               temporibus unde eveniet minus velit dolor quisquam iusto rerum suscipit beatae enim, at, perferendis
