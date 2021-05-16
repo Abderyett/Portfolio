@@ -5,11 +5,14 @@ import { color } from '../../utilities';
 
 export const Navbar = styled.nav`
   height: 6rem;
-  display: flex;
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-flow: column;
   color: ${(props) => props.theme.headingText};
   border-bottom: 1px solid ${(props) => props.theme.borderNav};
-  align-items: center;
-  justify-content: start;
+
+  place-items: center;
+  grid-template-columns: 35% 65%;
   position: sticky;
   top: 0;
   left: 0;
@@ -27,20 +30,24 @@ export const Navbar = styled.nav`
       font-size: 2rem;
       padding-left: 3.5rem;
     }
+    @media (min-width: 768px) and(max-width:952px) {
+      font-size: 2rem;
+    }
   }
   @media (max-width: 807px) {
+    flex-wrap: nowrap;
+    display: flex;
     justify-content: space-between;
   }
-  @media (min-width: 1350px) {
-    justify-content: space-between;
+  @media (min-width: 768px) and(max-width:952px) {
   }
 `;
 export const NavList = styled.ul`
   margin-left: 10rem;
   font-size: 1.5rem;
   display: flex;
-  @media (min-width: 1350px) {
-    margin-right: 5rem;
+  @media (max-width: 952px) and (min-width: 768px) {
+    margin-left: 1rem;
   }
 
   li a {

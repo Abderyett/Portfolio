@@ -59,7 +59,6 @@ function Navbar() {
               Contact
             </Link>
           </li>
-
           <Toggle />
         </S.NavList>
       </S.NavItems>
