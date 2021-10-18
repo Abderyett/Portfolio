@@ -58,10 +58,11 @@ export const Image = styled(motion.img)`
 `;
 export const AboutText = styled(motion.div)`
   width: 100%;
-  height: 20rem;
+  /* height: 20rem; */
   border-radius: ${rounded.md};
   box-shadow: ${shadow.md};
   padding: 2rem;
+  line-height: 3rem;
   background: ${(props) => props.theme.cardColor};
   border: 0.5px solid rgba(0, 0, 0, 0.2);
 

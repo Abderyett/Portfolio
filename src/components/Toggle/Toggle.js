@@ -43,7 +43,10 @@ const Input = styled.input`
     transform: scale(0.9);
   }
   @media (max-width: 807px) {
-    display: none;
+    /* display: none; */
+
+    margin: 5% auto 5%;
+    transform: translateY(-50%);
   }
 `;
 

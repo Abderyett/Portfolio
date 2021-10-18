@@ -7,7 +7,7 @@ import { data, rounded } from '../../utilities';
 
 function CardList() {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.1,
   });
   const animation = useAnimation();
 

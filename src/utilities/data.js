@@ -60,33 +60,29 @@ export const data = [
     name: 'Node',
     image: Node,
   },
+
   {
     id: 10,
-    name: 'Webpack',
-    image: webpack,
-  },
-  {
-    id: 11,
     name: 'NPM',
     image: npm,
   },
   {
-    id: 12,
+    id: 11,
     name: 'github',
     image: github,
   },
   {
-    id: 13,
+    id: 12,
     name: 'posgresql',
     image: posgresql,
   },
   {
-    id: 14,
+    id: 13,
     name: 'bootstrap',
     image: bootstrap,
   },
   {
-    id: 15,
+    id: 14,
     name: 'mongodb',
     image: mongodb,
   },

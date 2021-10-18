@@ -6,7 +6,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { rounded, shadow, color } from '../../utilities';
 
-function Card({ image, description, stack, link }) {
+function Card({ image, description, stack, link, github }) {
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
@@ -29,7 +29,7 @@ function Card({ image, description, stack, link }) {
           <StyledLink href={link} target="_blank" rel="noopener noreferrer">
             <GoLinkExternal />
           </StyledLink>
-          <StyledLink href={link} target="_blank" rel="noopener noreferrer">
+          <StyledLink href={github} target="_blank" rel="noopener noreferrer">
             <GoMarkGithub />
           </StyledLink>
         </Links>
@@ -63,7 +63,7 @@ const ImageContainer = styled.div`
   img {
     width: 30rem;
     height: 30rem;
-    object-fit: fill;
+    object-fit: cover;
     border-top-left-radius: ${rounded.md};
     border-top-right-radius: ${rounded.md};
   }
@@ -117,6 +117,7 @@ Card.propTypes = {
   image: PropTypes.string,
   description: PropTypes.string,
   link: PropTypes.string,
+  github: PropTypes.string,
   stack: PropTypes.array,
 };
 export default Card;

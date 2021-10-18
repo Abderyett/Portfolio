@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
 
-import { color } from '../../utilities';
+import { color, shadow } from '../../utilities';
 
 export const Navbar = styled.nav`
   height: 6rem;
@@ -43,7 +43,7 @@ export const Navbar = styled.nav`
   }
 `;
 export const NavList = styled.ul`
-  margin-left: 10rem;
+  margin-left: 1rem;
   font-size: 1.5rem;
   display: flex;
   @media (max-width: 952px) and (min-width: 768px) {
@@ -85,6 +85,7 @@ export const NavList = styled.ul`
     padding-left: 0;
     z-index: 3;
     width: 100vw;
+    box-shadow: ${shadow.lg};
 
     background: ${(props) => props.theme.background};
     /* transform: ${({ open }) => (open ? 'translateX(-150%)' : 'translateX(0)')}; */

@@ -53,9 +53,10 @@ function About() {
           <S.Image ref={ref} src={profile} animate={animation} initial={{ x: -10, opacity: 0 }} />
           <S.AboutText ref={ref} animate={animation} initial={{ x: 10, opacity: 0 }}>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at ipsam quasi? Voluptate nisi
-              temporibus unde eveniet minus velit dolor quisquam iusto rerum suscipit beatae enim, at, perferendis
-              repellat iure?
+              I'm a full-stack JavaScript developer in Algiers. I love to build web apps with React, Redux, Express,and
+              MongoDB.
+              <br /> I am currently open to opportunities within the web development and if you feel like we would be a
+              great match, I’d love to hear from you!
             </p>
           </S.AboutText>
         </S.Container>

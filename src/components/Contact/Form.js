@@ -7,10 +7,10 @@ import { useInView } from 'react-intersection-observer';
 import { color, rounded, shadow } from '../../utilities';
 
 export default function ContactUs() {
-  function sendEmail(e) {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_96inzim', 'template_2hqzuqx', e.target, 'user_v6pXWeXu8vsAlJ4YzHzKf').then(
+    emailjs.sendForm('gmail', 'template_bq6tzet', e.target, 'user_v6pXWeXu8vsAlJ4YzHzKf').then(
       (result) => {
         console.log(result.text);
       },
@@ -18,7 +18,8 @@ export default function ContactUs() {
         console.log(error.text);
       }
     );
-  }
+    e.target.reset();
+  };
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -46,7 +47,7 @@ export default function ContactUs() {
     >
       <Wrapper>
         <NameInput type="text" name="name" placeholder="Your Name" />
-        <EmailInput type="email" name="user_email" placeholder="Email" />
+        <EmailInput type="email" name="email" placeholder="Email" />
       </Wrapper>
       <StyledfInput type="text" name="subject" placeholder="Subject" />
 
@@ -69,10 +70,11 @@ const FormStyled = css`
   height: 4rem;
   color: ${color.grey_700};
   font-family: 'rubikregular';
+  outline: none;
 
   &:focus {
-    outline: 1px solid ${(props) => props.theme.outlineColor};
-    /* box-shadow: 0 0 1pt 1pt ${color.red_400}; */
+    ${'' /* outline: 1px solid ${(props) => props.theme.outlineColor}; */}
+    box-shadow: 0px 0px 0px 1px ${color.light_blue_vivid_500};
   }
 `;
 const StyledfInput = styled.input`
@@ -85,6 +87,7 @@ const StyledfTextarea = styled.textarea`
   max-width:540px;
   height: 12rem;
   text-indent: 2%;
+  padding-top: 1rem;
 `;
 const NameInput = styled.input`
   ${FormStyled}
